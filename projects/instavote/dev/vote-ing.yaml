@@ -1,0 +1,25 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: vote
+  namespace: instavote
+  annotations:
+    kubernetes.io/ingress.class: traefik
+spec:
+  rules:
+  - host: vote.example.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: vote
+          servicePort: 80
+  - host: results.example.org
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: results
+          servicePort: 80
+

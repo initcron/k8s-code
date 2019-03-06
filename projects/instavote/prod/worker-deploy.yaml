@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: worker
+  namespace: instavote
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      role: worker
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  minReadySeconds: 20
+  template:
+    metadata:
+      name: worker
+      labels:
+        app: java
+        role: worker
+        version: latest
+    spec:
+      containers:
+        - name: app
+          image: schoolofdevops/vote-worker:latest
