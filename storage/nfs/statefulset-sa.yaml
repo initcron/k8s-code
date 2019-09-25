@@ -19,10 +19,13 @@ spec:
     app: nfs-provisioner
 ---
 kind: StatefulSet
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 metadata:
   name: nfs-provisioner
 spec:
+  selector: 
+    matchLabels: 
+      app: nfs-provisioner
   serviceName: "nfs-provisioner"
   replicas: 1
   template:
