@@ -15,7 +15,7 @@ spec:
         backend:
           serviceName: vote
           servicePort: 80
-  - host: results.example.org
+  - host: results.example.com
     http:
       paths:
       - path: /
