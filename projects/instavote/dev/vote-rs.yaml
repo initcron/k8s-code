@@ -1,7 +1,9 @@
 apiVersion: xxx
 kind: xxx
 metadata:
-  xxx 
+  name: xxx 
+  labels:
+    role: vote
 spec:
   xxx 
   template: 
