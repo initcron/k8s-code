@@ -22,6 +22,9 @@ spec:
       - image: postgres:9.4
         imagePullPolicy: Always
         name: db
+        env:
+          - name: POSTGRES_HOST_AUTH_METHOD
+            value: trust
         ports:
         - containerPort: 5432
           protocol: TCP
