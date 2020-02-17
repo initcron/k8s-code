@@ -11,8 +11,6 @@ spec:
       maxSurge: 1
       maxUnavailable: 1
   minReadySeconds: 20
-  xxx
-  xxx
   selector:
     xxx
   template:
