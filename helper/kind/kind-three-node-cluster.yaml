@@ -1,0 +1,32 @@
+# three node (two workers) cluster config
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+nodes:
+- role: control-plane
+  extraPortMappings:
+  - containerPort: 32000
+    hostPort: 32000
+    listenAddress: "0.0.0.0"
+    protocol: tcp
+  - containerPort: 30300
+    hostPort: 30300
+    listenAddress: "0.0.0.0"
+    protocol: tcp
+  - containerPort: 30000
+    hostPort: 30000
+    listenAddress: "0.0.0.0"
+    protocol: tcp
+  - containerPort: 80
+    hostPort: 80
+    listenAddress: "0.0.0.0"
+    protocol: tcp
+  - containerPort: 8000
+    hostPort: 8000
+    listenAddress: "0.0.0.0"
+    protocol: tcp
+  - containerPort: 8080
+    hostPort: 8001
+    listenAddress: "0.0.0.0"
+    protocol: tcp
+- role: worker
+- role: worker
