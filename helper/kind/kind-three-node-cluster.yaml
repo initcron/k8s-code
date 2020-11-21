@@ -20,6 +20,8 @@ nodes:
     hostPort: 30000
     listenAddress: "0.0.0.0"
     protocol: tcp
+- role: worker
+  extraPortMappings:
   - containerPort: 80
     hostPort: 80
     listenAddress: "0.0.0.0"
@@ -32,5 +34,5 @@ nodes:
     hostPort: 8001
     listenAddress: "0.0.0.0"
     protocol: tcp
-- role: worker
+
 - role: worker
