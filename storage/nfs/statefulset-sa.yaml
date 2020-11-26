@@ -2,6 +2,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: nfs-provisioner
+  namespace: storage
   labels:
     app: nfs-provisioner
 spec:
@@ -22,6 +23,7 @@ kind: StatefulSet
 apiVersion: apps/v1
 metadata:
   name: nfs-provisioner
+  namespace: storage
 spec:
   selector: 
     matchLabels: 
@@ -56,7 +58,7 @@ spec:
                 - DAC_READ_SEARCH
                 - SYS_RESOURCE
           args:
-            - "-provisioner=instavote/nfs"
+            - "-provisioner=storage/nfs"
           env:
             - name: POD_IP
               valueFrom:

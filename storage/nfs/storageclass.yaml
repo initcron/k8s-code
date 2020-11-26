@@ -4,7 +4,7 @@ metadata:
   name: nfs
   annotations:
     storageclass.kubernetes.io/is-default-class: "true"
-provisioner: instavote/nfs
+provisioner: storage/nfs
 parameters:
   mountOptions: "vers=4.1"
 
