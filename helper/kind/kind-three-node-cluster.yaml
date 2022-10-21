@@ -32,7 +32,7 @@ nodes:
     hostPort: 30400
     listenAddress: "0.0.0.0"
     protocol: tcp
-- role: node
+- role: worker
   extraPortMappings:
   - containerPort: 80
     hostPort: 80
@@ -47,4 +47,4 @@ nodes:
     listenAddress: "0.0.0.0"
     protocol: tcp
 
-- role: node
+- role: worker
