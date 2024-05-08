@@ -1,25 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  creationTimestamp: null
+  labels:
+    app: worker
   name: worker
-  namespace: instavote
 spec:
-  replicas: 2
-  strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxSurge: 1
-      maxUnavailable: 1
-  minReadySeconds: 20
+  replicas: 1
   selector:
-    xxx
+    matchLabels:
+      app: worker
+  strategy: {}
   template:
     metadata:
-      name: worker
+      creationTimestamp: null
       labels:
-        app: java
-        role: worker
-        version: latest
+        app: worker
     spec:
       containers:
-      - xxx
+      - image: schoolofdevops/worker:latest
+        name: worker
+        resources: {}
+status: {}

@@ -3,22 +3,23 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: result
-  name: result
+    app: vote
+  name: vote
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
-      app: result
+      app: vote
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: result
+        app: vote
+        role: vote
     spec:
       containers:
-      - image: schoolofdevops/vote-result
-        name: vote-result
+      - image: schoolofdevops/vote:v1
+        name: vote
         resources: {}
 status: {}
