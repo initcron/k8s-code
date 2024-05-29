@@ -4,7 +4,7 @@ metadata:
   name: redis
   namespace: instavote
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       tier: back
