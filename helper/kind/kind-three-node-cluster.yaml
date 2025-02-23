@@ -16,6 +16,14 @@ nodes:
     hostPort: 30000
     listenAddress: "0.0.0.0"
     protocol: tcp
+  - containerPort: 30055
+    hostPort: 30055
+    listenAddress: "0.0.0.0"
+    protocol: tcp
+  - containerPort: 30056
+    hostPort: 30056
+    listenAddress: "0.0.0.0"
+    protocol: tcp
   - containerPort: 30100
     hostPort: 30100
     listenAddress: "0.0.0.0"
@@ -30,6 +38,22 @@ nodes:
     protocol: tcp
   - containerPort: 30400
     hostPort: 30400
+    listenAddress: "0.0.0.0"
+    protocol: tcp
+  - containerPort: 30500
+    hostPort: 30800
+    listenAddress: "0.0.0.0"
+    protocol: tcp
+  - containerPort: 30600
+    hostPort: 30800
+    listenAddress: "0.0.0.0"
+    protocol: tcp
+  - containerPort: 30700
+    hostPort: 30800
+    listenAddress: "0.0.0.0"
+    protocol: tcp
+  - containerPort: 30800
+    hostPort: 30800
     listenAddress: "0.0.0.0"
     protocol: tcp
 - role: worker
