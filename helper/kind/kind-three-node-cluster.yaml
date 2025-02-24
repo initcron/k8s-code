@@ -41,15 +41,15 @@ nodes:
     listenAddress: "0.0.0.0"
     protocol: tcp
   - containerPort: 30500
-    hostPort: 30800
+    hostPort: 30500
     listenAddress: "0.0.0.0"
     protocol: tcp
   - containerPort: 30600
-    hostPort: 30800
+    hostPort: 30600
     listenAddress: "0.0.0.0"
     protocol: tcp
   - containerPort: 30700
-    hostPort: 30800
+    hostPort: 30700
     listenAddress: "0.0.0.0"
     protocol: tcp
   - containerPort: 30800
